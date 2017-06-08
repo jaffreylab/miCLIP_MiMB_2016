@@ -12,7 +12,7 @@ pf=$(echo ${s%.*})
 
 #from the m6A positions, get the position of the 5mer motif (+-2 of the m6A)
 echo "getting positions of 5mers..."
-bedtools slop -s -l 2 -r 2 -i $1.bed -g /home/shareowner/genomes/human/all_chrom.fa.fai > $1.m6A.+-2.bed 
+bedtools slop -s -l 2 -r 2 -i $pf.bed -g /home/shareowner/genomes/human/all_chrom.fa.fai > $1.m6A.+-2.bed 
 
 #get the sequence of the +-2 5mers !!! genomic coordinates !!!
 echo "getting sequences of 5mers"
